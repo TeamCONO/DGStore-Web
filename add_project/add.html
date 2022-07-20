@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>프로젝트 추가</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js" integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="./add.css">
 </head>
 <body>
@@ -13,29 +14,56 @@
         <img id="login_img" src="../img/로그인 1.png" alt="" width="40" height="40">
     </header>
     <ul id="info">
-        <li><a href="#">프로젝트 추가</a></li>
-        <li><a href="#">프로젝트 관리</a></li>
-        <li><a href="#">로그인</a></li>
+        <li>프로젝트 추가</li>
+        <li><a href="../management/manage.html">프로젝트 관리</a></li>
+        <li><a href="../login/login.html">로그인</a></li>
     </ul>
     <nav id="main">
         <div id="proj">
             <h3>프로젝트 추가</h3>
             <input id="proj_name" type="text" placeholder="프로젝트 이름"><br>
+            <input id="proj_team" type="text" placeholder="팀 이름"><br>
+            <input id="proj_git" type="text" placeholder="GitHub 주소"><br>
+            <input id="skill" type="text" placeholder="프로젝트 스택(선택)"><br>
             <textarea id="proj_info" name="" cols="30" placeholder="프로젝트 상세 내용" rows="10"></textarea>
-            
-            <label>이미지 등록</label>
-            <input id="img" type="file" accept=".jpg, .png, .svg" >
             <br>
-            <div id="sel">
-                <h4>프로젝트 상태 : </h4>
-                <select id = "chose">
-                    <option value="public">공개</option>
-                    <option value="secret">비공개</option>
-                </select>
+            <!-- <label>이미지 등록</label> -->
+            <div id="dd">
+
             </div>
-            <button id="regi">프로젝트 등록</button>
+            <p id="Output"></p>
+            <br>
+            
+            <h3>다운로드 링크(선택)</h3>
+            <input id="windows" type="text" placeholder="Windows 다운로드 링크">
+            <input id="macos" type="text" placeholder="macOS 다운로드 링크">
+            <input id="linux" type="text" placeholder="Linux 다운로드 링크">
+            <input id="android" type="text" placeholder="Android 다운로드 링크">
+            <input id="ios" type="text" placeholder="iOS 다운로드 링크">
+            <!-- <div id="stac">
+                <h4>프로젝트 스택 : </h4>
+                <select id="skill">
+                    <option value="Web">Web</option>
+                    <option value="Server">Server</option>
+                    <option value="Android">Android</option>
+                    <option value="IOS">IOS</option>
+                </select>
+                
+            </div> -->
+            <!-- <div id="platform">
+                <h4>프로젝트 플랫폼 : </h4>
+                <select id="plat">
+                    <option value="window">windows</option>
+                    <option value="mac">Macos</option>
+                    <option value="Android">Android</option>
+                    <option value="IOS">IOS</option>
+                    <option value="linux">Linux</option>
+                </select>
+            </div> -->
+            <button id="regi" onclick="finish()">프로젝트 등록</button>
             
         </div>
     </nav>
+    <script src="./add.js"></script>
 </body>
 </html>

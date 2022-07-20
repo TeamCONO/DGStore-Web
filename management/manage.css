@@ -1,0 +1,24 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+*{margin :0; padding: 0; font-family: Pretendard, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
+
+body{background-color: #eeeeee;}
+#header{display: flex; width: 100%; height: 65px; background-color: #3578F6;}
+    #header a{text-decoration: none; display: block;}
+    #header .title{font-size: 1.5em; padding: 0.7em 0 0 2.5em; color: aliceblue; width: 100%;}
+    #header #login_img{display: block; margin: auto 0 auto 88%;}
+
+#info{background-color: #fff; position:relative; display: flex; list-style: none;box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1); border-radius: 5px;}
+    #info li{padding: 1em 0 0 4em; height: 40px;}
+        #info li a{ color: black; text-decoration: none;}
+        #info li a:hover{ color: #3578F6;}
+
+
+        /*여기부터*/
+.image { object-fit: cover;  height: 200px; width: 350px; border-top-left-radius: 25px; border-top-right-radius: 25px;}
+.container { float: left; display: block; height: 265px; width: 350px; background-color: rgb(243, 242, 247); border-radius: 25px; box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1); margin-left: 61.4px; margin-top: 50px;}
+.hcontainer {display: flex; flex-direction: row; justify-content: space-between;align-items: center; margin: 9px 17px;}
+.vcontainer {display: flex;flex-direction: column;}
+.title {font-weight: 700;font-size: 15pt;}
+.developer {font-size: 8pt;}
+        /*여기까지 프로젝트 기본 CSS*/

@@ -1,12 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html>
+    <head>
+        <style>
+            @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+            *{margin: 0; padding: 0;}
+
+            body { font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;}
+            .image { object-fit: cover;  height: 200px; width: 350px; border-top-left-radius: 25px; border-top-right-radius: 25px;}
+            nav{ width: 100%; height: 900px;}
+            
+            /*여기부터*/
+            .container { float: left; display: block; height: 265px; width: 350px; background-color: rgb(243, 242, 247); border-radius: 25px; box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1); margin-left: 61.4px; margin-top: 50px;}
+            .hcontainer {display: flex; flex-direction: row; justify-content: space-between;align-items: center; margin: 9px 17px;}
+            .vcontainer {display: flex;flex-direction: column;}
+            .title {font-weight: 700;font-size: 15pt;}
+            .developer {font-size: 8pt;}
+            /*여기까지 프로젝트 기본 CSS
+*/
+        </style>
+    </head>
+    <body>
+        <!--<div class="all">
+            <div>
+
+            </div>
+        </div> -->
+        <nav class="dd">
+            <div class="container">
+                <img src="/img/로그인 1.png" class="image">
+                <div class="hcontainer">
+                    <div class="vcontainer">
+                        <span class="title">Rolling Root</span>
+                        <span class="developer">406SOFT</span>
+                    </div>
+                    <img src="https://simpleicons.org/icons/unity.svg" width="25">
+                </div>
+            </div>
+            <div class="container">
+                <img src="/img/로그인 1.png" class="image">
+                <div class="hcontainer">
+                    <div class="vcontainer">
+                        <span class="title">Green Share</span>
+                        <span class="developer">Devele</span>
+                    </div>
+                    <img src="https://cdn-icons-png.flaticon.com/512/14/14415.png" width="25">
+                </div>
+            </div>
+            <div class="container">
+                <img src="/img/로그인 1.png" class="image">
+                <div class="hcontainer">
+                    <div class="vcontainer">
+                        <span class="title">경태 위키</span>
+                        <span class="developer">React</span>
+                    </div>
+                    <img src="data:image/png;base64,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" width="25">
+                </div>
+            </div>
+            <div class="container">
+                <img src="/img/로그인 1.png" class="image">
+                <div class="hcontainer">
+                    <div class="vcontainer">
+                        <span class="title">미..미안</span>
+                        <span class="developer">dd</span>
+                    </div>
+                    <img src="https://simpleicons.org/icons/unity.svg" width="25">
+                </div>
+            </div>
+            <div class="container">
+                <img src="/img/로그인 1.png" class="image">
+                <div class="hcontainer">
+                    <div class="vcontainer">
+                        <span class="title">알레르미</span>
+                        <span class="developer">devele</span>
+                    </div>
+                    <img src="https://simpleicons.org/icons/unity.svg" width="25">
+                </div>
+            </div>
+            <div class="container">
+                <img src="/img/로그인 1.png" class="image">
+                <div class="hcontainer">
+                    <div class="vcontainer">
+                        <span class="title">Rolling Root</span>
+                        <span class="developer">406SOFT</span>
+                    </div>
+                    <img src="https://simpleicons.org/icons/unity.svg" width="25">
+                </div>
+            </div>
+            <div class="container">
+                <img src="/img/로그인 1.png" class="image">
+                <div class="hcontainer">
+                    <div class="vcontainer">
+                        <span class="title">Rolling Root</span>
+                        <span class="developer">406SOFT</span>
+                    </div>
+                    <img src="https://simpleicons.org/icons/unity.svg" width="25">
+                </div>
+            </div>
+            <div class="container">
+                <img src="/img/로그인 1.png" class="image">
+                <div class="hcontainer">
+                    <div class="vcontainer">
+                        <span class="title">Rolling Root</span>
+                        <span class="developer">406SOFT</span>
+                    </div>
+                    <img src="https://simpleicons.org/icons/unity.svg" width="25">
+                </div>
+            </div>
+            <div class="container">
+                <img src="/img/로그인 1.png" class="image">
+                <div class="hcontainer">
+                    <div class="vcontainer">
+                        <span class="title">Rolling Root</span>
+                        <span class="developer">406SOFT</span>
+                    </div>
+                    <img src="https://simpleicons.org/icons/unity.svg" width="25">
+                </div>
+            </div>
+            <div class="container">
+                <img src="/img/로그인 1.png" class="image">
+                <div class="hcontainer">
+                    <div class="vcontainer">
+                        <span class="title">Rolling Root</span>
+                        <span class="developer">406SOFT</span>
+                    </div>
+                    <img src="https://simpleicons.org/icons/unity.svg" width="25">
+                </div>
+            </div>
+            <div class="container">
+                <img src="/img/로그인 1.png" class="image">
+                <div class="hcontainer">
+                    <div class="vcontainer">
+                        <span class="title">Rolling Root</span>
+                        <span class="developer">406SOFT</span>
+                    </div>
+                    <img src="https://simpleicons.org/icons/unity.svg" width="25">
+                </div>
+            </div>
+        </nav>
+    </body>
 </html>
